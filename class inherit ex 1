@@ -1,0 +1,33 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"Hello! My name is {self.name}, and I am {self.age} years old.")
+
+class Student(Person):
+    def __init__(self, name, age, course, year):
+        # Call the parent class constructor using super()
+        super().__init__(name, age)
+        self.course = course
+        self.year = year
+
+    def study(self):
+        print(f"{self.name} is studying {self.course} as a {self.year}nd-year student.")
+
+student1 = Student("Reeza Vancuylenberg", 18, "BS Computer Engineering", 2)
+
+student1.introduce()
+student1.study()
+
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+
+    def introduce(self):
+        print(f"I’m {self.name}, a {self.age}-year-old teacher handling {self.subject}.")
+
+teacher1 = Teacher("Mr. Cruz", 35, "Python Programming")
+teacher1.introduce()
