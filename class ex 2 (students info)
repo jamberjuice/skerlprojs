@@ -1,0 +1,20 @@
+class Student:
+    def __init__(self, name, course, year):
+        self.name = name
+        self.course = course
+        self.year = year
+
+    def introduce(self):
+        print(f"Hi, I’m {self.name}, a {self.year}-year {self.course} student.")
+
+# Creating objects (instances)
+student1 = Student("Reeza Vancuylenberg", "BS Computer Engineering", "2nd")
+student2 = Student("Kenneth Punzalan", "BS Computer Science", "2nd")
+
+# Calling methods
+student1.introduce()
+student2.introduce()
+
+# Modifying attributes after creation
+student1.year = 3
+print(f"(student1.name) is now in year (student1.year).")
