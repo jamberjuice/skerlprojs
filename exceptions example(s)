@@ -1,0 +1,76 @@
+print("Practicing try-except")
+
+try:
+    numerator = 50
+    denom = int(input("Enter the denominator: "))
+    quotient = numerator / denom
+    print("Division performed successfully.")
+
+except ZeroDivisionError:
+    print("Error: Denominator cannot be zero.")
+
+
+print("\nHandling multiple exceptions")
+
+try:
+    numerator = 50
+    denom = int(input("Enter the denominator: "))
+    print(numerator / denom)
+    print("Division successful.")
+
+except ZeroDivisionError:
+    print("Error: Division by zero not allowed.")
+
+except ValueError:
+    print("Error: Please enter integers only.")
+
+
+print("\nUsing try-except-else")
+
+try:
+    numerator = 50
+    denom = int(input("Enter the denominator: "))
+    quotient = numerator / denom
+
+except ZeroDivisionError:
+    print("Error: Zero is not allowed.")
+
+except ValueError:
+    print("Error: Only integers allowed.")
+
+else:
+    print("Result of division is:", quotient)
+
+
+print("\nUsing finally clause")
+
+try:
+    x = int(input("Enter a number: "))
+    print("Square:", x * x)
+
+except ValueError:
+    print("Invalid input. Not a number.")
+
+finally:
+    print("OVER AND OUT")
+
+
+print("\nUsing raise")
+
+age = int(input("Enter your age: "))
+
+if age < 0:
+    raise ValueError("Age cannot be negative!")
+
+else:   
+    print("Valid age:", age)
+
+
+print("\nUsing assert")
+
+def check_positive(n):
+    assert n >= 0, "OOPS... Negative Number"
+    print("Square:", n * n)
+
+check_positive(10)
+check_positive(-5)
