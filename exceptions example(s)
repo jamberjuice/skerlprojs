@@ -10,6 +10,8 @@ except ZeroDivisionError:
     print("Error: Denominator cannot be zero.")
 
 
+
+
 print("\nHandling multiple exceptions")
 
 try:
@@ -23,6 +25,8 @@ except ZeroDivisionError:
 
 except ValueError:
     print("Error: Please enter integers only.")
+
+
 
 
 print("\nUsing try-except-else")
@@ -42,6 +46,8 @@ else:
     print("Result of division is:", quotient)
 
 
+
+
 print("\nUsing finally clause")
 
 try:
@@ -55,6 +61,8 @@ finally:
     print("OVER AND OUT")
 
 
+
+
 print("\nUsing raise")
 
 age = int(input("Enter your age: "))
@@ -64,6 +72,8 @@ if age < 0:
 
 else:   
     print("Valid age:", age)
+
+
 
 
 print("\nUsing assert")
