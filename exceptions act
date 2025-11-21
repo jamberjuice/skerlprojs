@@ -1,0 +1,26 @@
+try:
+    numerator = int(input("Enter numerator: "))
+    denominator = int(input("Enter denominator: "))
+
+    assert numerator >= 0, "Numerator cannot be negative"
+
+    if denominator > 1000:
+        raise ValueError("Denominator too large!")
+
+    result = numerator / denominator
+    print("Result:", result)
+
+except ValueError:
+    print("ValueError: Denominator too large!")
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+
+except AssertionError:
+    print("AssertionError: Numerator cannot be negative")
+
+else:
+    print("Division successful!")
+
+finally:
+    print("Program Finished")
